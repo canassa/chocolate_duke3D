@@ -3608,10 +3608,10 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
         pub = 0;
     }
 
-    if ( ud.overhead_on == 2 || ud.show_help || p->cursectnum == -1) {
+    //if ( ud.overhead_on == 2 || ud.show_help || p->cursectnum == -1) {
         // TODO: An initialized engine_state should be returned
-        return engine_state;
-    }
+        //return engine_state;
+    //}
 
     smoothratio = min(max(smoothratio,0),65536);
 
@@ -3632,6 +3632,7 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
     animatecamsprite();
 
     if (ud.camerasprite >= 0) {
+        /*
         Sprite *s;
 
         s = &sprite[ud.camerasprite];
@@ -3649,8 +3650,10 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
         engine_state = drawrooms(s->x,s->y,s->z-(4<<8),cang,s->yvel,s->sectnum,false);
         animatesprites(s->x, s->y, cang, smoothratio, engine_state);
         drawmasks(engine_state, false);
+         */
     } else {
         i = divscale22(1,sprite[p->i].yrepeat+28);
+        /*
         if (i != oyrepeat) {
             oyrepeat = i;
             //printf("1: %d %d\n", oyrepeat,yxaspect);
@@ -3699,14 +3702,17 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
             i = fixedPointCos(i)*8 + fixedPointSin(i)*5L;
             setaspect(i>>1,yxaspect);
         }
+         */
 
         if ( (snum == myconnectindex) && (numplayers > 1) ) {
+            /*
             cposx = omyx+mulscale16((int32_t)(myx-omyx),smoothratio);
             cposy = omyy+mulscale16((int32_t)(myy-omyy),smoothratio);
             cposz = omyz+mulscale16((int32_t)(myz-omyz),smoothratio);
             cang = omyang+mulscale16((int32_t)(((myang+1024-omyang)&2047)-1024),smoothratio);
             choriz = omyhoriz+omyhorizoff+mulscale16((int32_t)(myhoriz+myhorizoff-omyhoriz-omyhorizoff),smoothratio);
             sect = mycursectnum;
+             */
         } else {
             cposx = p->oposx+mulscale16((int32_t)(p->posx-p->oposx),smoothratio);
             cposy = p->oposy+mulscale16((int32_t)(p->posy-p->oposy),smoothratio);
@@ -3716,6 +3722,7 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
         }
         cang += p->look_ang;
 
+        /*
         if (p->newowner >= 0) {
             cang = p->ang+p->look_ang;
             choriz = p->horiz+p->horizoff;
@@ -3731,10 +3738,12 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
         } else {
             view(p,&cposx,&cposy,&cposz,&sect,cang,choriz);
         }
+         */
 
+        
         cz = hittype[p->i].ceilingz;
         fz = hittype[p->i].floorz;
-
+        /*
         if (earthquaketime > 0 && p->on_ground == 1) {
             cposz += 256-(((earthquaketime)&1)<<9);
             cang += (2-((earthquaketime)&2))<<2;
@@ -3743,35 +3752,38 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
         if (sprite[p->i].pal == 1) {
             cposz -= (18<<8);
         }
+         */
 
+        
         if (p->newowner >= 0) {
-            choriz = 100+sprite[p->newowner].shade;
+            //choriz = 100+sprite[p->newowner].shade;
         } else if (p->spritebridge == 0) {
             if ( cposz < ( p->truecz + (4<<8) ) ) {
                 cposz = cz + (4<<8);
             } else if ( cposz > ( p->truefz - (4<<8) ) ) {
-                cposz = fz - (4<<8);
+                //cposz = fz - (4<<8);
             }
         }
 
         if (sect >= 0) {
             getzsofslope(sect,cposx,cposy,&cz,&fz);
             if (cposz < cz+(4<<8)) {
-                cposz = cz+(4<<8);
+                //cposz = cz+(4<<8);
             }
             if (cposz > fz-(4<<8)) {
                 cposz = fz-(4<<8);
             }
         }
-
+        /*
         if (choriz > 299) {
             choriz = 299;
         } else if (choriz < -99) {
             choriz = -99;
         }
+         */
 
-        se40code(cposx,cposy,cposz,cang,choriz,smoothratio);
-
+        //se40code(cposx,cposy,cposz,cang,choriz,smoothratio);
+        /*
         if ((gotpic[MIRROR>>3]&(1<<(MIRROR&7))) > 0) {
             dst = 0x7fffffff;
             i = 0;
@@ -3800,11 +3812,15 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
             }
             gotpic[MIRROR>>3] &= ~(1<<(MIRROR&7));
         }
+         */
+        
+        printf("%d\n",cposx);
 
-        EngineState *engine_state = drawrooms(cposx,cposy,cposz,cang,choriz,sect,false);
-        animatesprites(cposx, cposy, cang,smoothratio, engine_state);
-        drawmasks(engine_state, false);
+        EngineState *engine_state = drawrooms(-31243,7160,7168,-90,140,0,false);
+        //animatesprites(cposx, cposy, cang,smoothratio, engine_state);
+        //drawmasks(engine_state, false);
 
+        /*
         if (screencapt == 1) {
             setviewback();
             tiles[MAXTILES-1].lock = 1;
@@ -3828,8 +3844,10 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
             rotatesprite(160<<16,100<<16,i,tang+512,MAXTILES-2,0,0,4+2+64,windowx1,windowy1,windowx2,windowy2);
             tiles[MAXTILES-2].lock = 199;
         }
+         */
     }
 
+    /*
     restoreinterpolations();
 
     if (totalclock < lastvisinc) {
@@ -3839,6 +3857,7 @@ EngineState *displayrooms(short snum,int32_t smoothratio)
     } else {
         p->visibility = ud.const_visibility;
     }
+     */
 
     return engine_state;
 }
@@ -8486,6 +8505,7 @@ static int load_duke3d_groupfile(void)
 {
     // FIX_00032: Added multi base GRP manager. Use duke3d*.grp to handle multiple grp.
 
+    /*
     char  groupfilefullpath[512];
     groupfilefullpath[0] = '\0';
 
@@ -8497,11 +8517,50 @@ static int load_duke3d_groupfile(void)
 
 
     FixFilePath(groupfilefullpath);
+    */
 
-    return(initgroupfile(groupfilefullpath) != -1);
+    return(initgroupfile("/Users/cesar/apps/chocolate_duke3D/bin/DUKE3D.GRP") != -1);
 }
 
-int main(int argc,char  **argv)
+int main (int argc, char **argv)
+{
+    int32_t pos_x, pos_y, pos_z;
+    short ang, sector_num;
+    EngineState *engine_state;
+    
+    printf("teste\n");
+    
+    load_duke3d_groupfile();
+    
+    _platform_init(argc, argv, "Duke Nukem 3D", "Duke3D");
+    
+    //RegisterShutdownFunction( ShutDown );
+    
+    Startup();
+    //inittimer(TICRATE);
+    //loadpics("tiles000.art", "\0");
+    loadboard("/Users/cesar/simple.map", &pos_x, &pos_y, &pos_z, &ang, &sector_num);
+
+    //initengine();
+    setgamemode(2,1024,640);
+    genspriteremaps();
+    setbrightness(7, &palette[0]);
+
+    //newgame(ud.m_volume_number,ud.m_level_number,ud.m_player_skill);
+    //enterlevel(MODE_GAME); //start game.
+    
+    while (1) {
+        //sampletimer();
+        EngineState *engine_state = drawrooms(-31243,7160,7168,-90,140,0,false);
+
+        //animatesprites(s->x, s->y, cang, smoothratio, engine_state);
+        //drawmasks(engine_state, false);
+        //setbrightness('\b', &palette[0]);
+        nextpage();
+    }
+}
+
+int main2 (int argc,char  **argv)
 {
     int32_t i, j;
     int32_t filehandle;
@@ -8532,24 +8591,19 @@ int main(int argc,char  **argv)
     //      "group of known dukers who know what they are doing should be using\n"
     //      "it. Please report new bugs at xd@m-klein.com or on DX forums. Thx!\n\n");
 
-    printf("*** Chocolate DukeNukem3D v%d.%d ***\n\n", CHOCOLATE_DUKE_REV_X, CHOCOLATE_DUKE_REV_DOT_Y);
+    //printf("*** Chocolate DukeNukem3D v%d.%d ***\n\n", CHOCOLATE_DUKE_REV_X, CHOCOLATE_DUKE_REV_DOT_Y);
 
     // FIX_00033: Fake multi and AI are now fully working
     ud.multimode = 1;  // xduke: must be done before checkcommandline or that will prevent Fakeplayer and AI
 
-    if (!load_duke3d_groupfile()) {
-        Error(EXIT_SUCCESS, "Could not initialize any original BASE duke3d*.grp file\n"
-              "Even if you are playing a custom GRP you still need\n"
-              "an original base GRP file as Shareware/Full 1.3D GRP or\n"
-              "the v1.5 ATOMIC GRP file. Such a file seems to be missing\n"
-              "or is corrupted\n");
-    }
+    load_duke3d_groupfile();
 
     // FIX_00022: Automatically recognize the shareware grp (v1.3) + full version (1.3d) +
     //            atomic (1.4/1.5 grp) and the con files version (either 1.3 or 1.4) (JonoF's idea)
 
     // Detecting grp version
     // We keep the old GRP scheme detection for 19.6 compliance. Will be obsolete.
+    /*
     filehandle = kopen4load("DUKEDC9.MAP",1);
     kclose(filehandle);
 
@@ -8579,7 +8633,9 @@ int main(int argc,char  **argv)
     } else {
         grpVersion = DUKEITOUTINDC_GRP;
     }
+     */
 
+    /*
     // FIX_00062: Better support and identification for GRP and CON files for 1.3/1.3d/1.4/1.5
     if (    groupefil_crc32[0]==CRC_BASE_GRP_SHAREWARE_13 ||
             groupefil_crc32[0]==CRC_BASE_GRP_FULL_13 ||
@@ -8605,7 +8661,9 @@ int main(int argc,char  **argv)
             Error(EXIT_SUCCESS,"");
         }
     }
+     */
 
+    /*
     // computing exe crc
     ud.exeCRC[0] = 0;
     exe = NULL;
@@ -8619,14 +8677,16 @@ int main(int argc,char  **argv)
         }
         close(filehandle);
     }
+     */
 
 
-    checkcommandline(argc,argv);
+    //checkcommandline(argc,argv);
 
     _platform_init(argc, argv, "Duke Nukem 3D", "Duke3D");
 
-    totalmemory = Z_AvailHeap();
+    //totalmemory = Z_AvailHeap();
 
+    /*
     if (memorycheckoveride == 0) {
         if (totalmemory < (3162000-350000)) {
             puts("You don't have enough free memory to run Duke Nukem 3D.");
@@ -8638,12 +8698,14 @@ int main(int argc,char  **argv)
     } else {
         printf("Using %d bytes for heap.\n",totalmemory);
     }
+     */
 
-    RegisterShutdownFunction( ShutDown );
+    //RegisterShutdownFunction( ShutDown );
 
 
     Startup();
 
+    /*
     if ( eightytwofifty && numplayers > 1 && (MusicDevice != NumSoundCards) ) {
         puts("\n=========================================================================");
         puts("WARNING: 8250 UART detected.");
@@ -8657,48 +8719,39 @@ int main(int argc,char  **argv)
             getpackets();
         }
     }
+     */
 
-    if (g_bStun) {
-        waitforeverybody();
-    }
+    //if (g_bStun) {
+        //waitforeverybody();
+    //}
+    
+    
 
-    if (numplayers > 1) { // if multimode > 1 and numplayer == 1 => fake player mode on
-        ud.multimode = numplayers;
-        sendlogon();
-    } else if (boardfilename[0] != 0) {
         ud.m_level_number = 7;
         ud.m_volume_number = 0;
         ud.warp_on = 1;
-    }
 
-    getnames();
+    //getnames();
 
-    if (ud.multimode > 1) {
-        playerswhenstarted = ud.multimode;
+    
+    //if (ud.multimode > 1) {
+        //playerswhenstarted = ud.multimode;
+    //}
 
-        // AddFaz fix.
-        // This would cause monsters not to spawn when loading a usermap
-        /*
-        if(ud.warp_on == 0)
-        {
-            ud.m_monsters_off = 1;
-            ud.m_player_skill = 0;
-        }
-        */
-    }
+    //ud.last_level = -1;
 
-    ud.last_level = -1;
+    //RTS_Init(ud.rtsname);
+    //if (numlumps) {
+    //    printf("Using .RTS file:%s\n",ud.rtsname);
+    //}
 
-    RTS_Init(ud.rtsname);
-    if (numlumps) {
-        printf("Using .RTS file:%s\n",ud.rtsname);
-    }
+    //if (CONTROL_JoystickEnabled) {
+    //    CONTROL_CenterJoystick(CenterCenter,UpperLeft,LowerRight,CenterThrottle,CenterRudder);
+    //}
 
-    if (CONTROL_JoystickEnabled) {
-        CONTROL_CenterJoystick(CenterCenter,UpperLeft,LowerRight,CenterThrottle,CenterRudder);
-    }
-
-    puts("Loading palette/lookups.");
+    //puts("Loading palette/lookups.");
+    setgamemode(ScreenMode,ScreenWidth,ScreenHeight);
+    /*
     if ( setgamemode(ScreenMode,ScreenWidth,ScreenHeight) < 0 ) {
         printf("\nVESA driver for ( %i * %i ) not found/supported!\n",xdim,ydim);
         ScreenMode = 2;
@@ -8706,9 +8759,10 @@ int main(int argc,char  **argv)
         ScreenHeight = 200;
         setgamemode(ScreenMode,ScreenWidth,ScreenHeight);
     }
+     */
 
 
-    printf("genspriteremaps()\n");
+    //printf("genspriteremaps()\n");
     genspriteremaps();
 
 
@@ -8718,9 +8772,10 @@ int main(int argc,char  **argv)
         gameexit(" ");
     }
 
-    FX_StopAllSounds();
-    clearsoundlocks();
+    //FX_StopAllSounds();
+    //clearsoundlocks();
 
+    /*
     if (ud.warp_on > 1 && ud.multimode < 2) {
         clearview(0L);
         ps[myconnectindex].palette = palette;
@@ -8734,11 +8789,12 @@ int main(int argc,char  **argv)
             ud.warp_on = 0;
         }
     }
+     */
 
 
 
 MAIN_LOOP_RESTART:
-
+/*
     if (ud.warp_on == 0) { //if game is loaded without /V or /L cmd arguments.
 
         if (numplayers > 1 && boardfilename[0] != 0) { //check if a user map is loaded and in multiplayer.
@@ -8785,11 +8841,11 @@ MAIN_LOOP_RESTART:
             Logo(); //play logo, (game must be started via menus).
         }
     }
+*/
 
 
-
-    else if (ud.warp_on == 1) { //if cmd arguments /V and /L are given.
-
+    //if (ud.warp_on == 1) { //if cmd arguments /V and /L are given.
+        /*
         if (numplayers > 1) { //if in multiplayer reset everyones weapon status.
             int c;
 
@@ -8822,14 +8878,14 @@ MAIN_LOOP_RESTART:
                 resetinventory(c);
             }
 
-        }
+        }*/
 
         newgame(ud.m_volume_number,ud.m_level_number,ud.m_player_skill);
         enterlevel(MODE_GAME); //start game.
 
-    } else {
-        vscrn();
-    }
+    //} else {
+    //    vscrn();
+    //}
 
     if ( ud.warp_on == 0 && playback() ) {
         FX_StopAllSounds();
@@ -8842,7 +8898,8 @@ MAIN_LOOP_RESTART:
 
     //The main game loop is here.
     while ( !(ps[myconnectindex].gm&MODE_END) ) {
-        sampletimer();
+        //sampletimer();
+        /*
         if ( ud.recstat == 2 || ud.multimode > 1 || ( ud.show_help == 0 && (ps[myconnectindex].gm&MODE_MENU) != MODE_MENU ) )
             if ( ps[myconnectindex].gm&MODE_GAME ) {
                 // (" It's stuck here ")
@@ -8850,8 +8907,8 @@ MAIN_LOOP_RESTART:
                 if ( moveloop() ) {
                     continue;
                 }
-            }
-
+            }*/
+        /*
         if ( ps[myconnectindex].gm&MODE_EOL || ps[myconnectindex].gm&MODE_RESTART ) {
 
             if ( ps[myconnectindex].gm&MODE_EOL ) {
@@ -8890,23 +8947,26 @@ MAIN_LOOP_RESTART:
 
             enterlevel(ps[myconnectindex].gm);
             continue;
-        }
+        }*/
 
-        cheats();
+        //cheats();
 
-        if ( !CONSOLE_IsActive() ) {
-            nonsharedkeys();
-        }
+        //if ( !CONSOLE_IsActive() ) {
+        //    nonsharedkeys();
+        //}
 
 
-        if ( (ud.show_help == 0 && ud.multimode < 2 && !(ps[myconnectindex].gm&MODE_MENU) ) || ud.multimode > 1 || ud.recstat == 2) {
-            i = min(max((totalclock-ototalclock)*(65536L/TICSPERFRAME),0),65536);
-        } else {
-            i = 65536;
-        }
+        //if ( (ud.show_help == 0 && ud.multimode < 2 && !(ps[myconnectindex].gm&MODE_MENU) ) || ud.multimode > 1 || ud.recstat == 2) {
+        //    i = min(max((totalclock-ototalclock)*(65536L/TICSPERFRAME),0),65536);
+        //} else {
+        //    i = 65536;
+        //}
+        
+        EngineState *ee = displayrooms(screenpeek,i);
 
-        displayrest(i, displayrooms(screenpeek,i));
+        //displayrest(i, ee);
 
+        /*
         if (ps[myconnectindex].gm&MODE_DEMO) {
             goto MAIN_LOOP_RESTART;
         }
@@ -8920,7 +8980,7 @@ MAIN_LOOP_RESTART:
         if (VOLUMEONE)
             if (ud.show_help == 0 && show_shareware > 0 && (ps[myconnectindex].gm&MODE_MENU) == 0 ) {
                 rotatesprite((320-50)<<16,9<<16,65536L,0,BETAVERSION,0,0,2+8+16+128,0,0,xdim-1,ydim-1);
-            }
+            }*/
 
         nextpage();
     }
