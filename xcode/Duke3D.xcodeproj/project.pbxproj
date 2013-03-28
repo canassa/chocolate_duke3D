@@ -13,35 +13,7 @@
 		2D47FAFF16C6BA0D00DB3597 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623416788AB200E35E54 /* Cocoa.framework */; };
 		2D47FB0616C6BA0D00DB3597 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D47FB0416C6BA0D00DB3597 /* InfoPlist.strings */; };
 		2D47FB0C16C6BA0D00DB3597 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2D47FB0A16C6BA0D00DB3597 /* Credits.rtf */; };
-		2D47FB1616C6BA2E00DB3597 /* actors.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B623C16788F9B00E35E54 /* actors.c */; };
-		2D47FB1716C6BA2E00DB3597 /* animlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B623D16788F9B00E35E54 /* animlib.c */; };
-		2D47FB1816C6BA2E00DB3597 /* config.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B623F16788F9B00E35E54 /* config.c */; };
-		2D47FB1916C6BA2E00DB3597 /* console.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B624116788F9B00E35E54 /* console.c */; };
-		2D47FB1A16C6BA2E00DB3597 /* control.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B624316788F9B00E35E54 /* control.c */; };
-		2D47FB1B16C6BA2E00DB3597 /* cvar_defs.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B624516788F9B00E35E54 /* cvar_defs.c */; };
-		2D47FB1C16C6BA2E00DB3597 /* cvars.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B624716788F9B00E35E54 /* cvars.c */; };
 		2D47FB1D16C6BA2E00DB3597 /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625016788F9B00E35E54 /* game.c */; };
-		2D47FB1E16C6BA2E00DB3597 /* gamedef.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625216788F9B00E35E54 /* gamedef.c */; };
-		2D47FB1F16C6BA2E00DB3597 /* global.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625416788F9B00E35E54 /* global.c */; };
-		2D47FB2016C6BA2E00DB3597 /* keyboard.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625616788F9B00E35E54 /* keyboard.c */; };
-		2D47FB2116C6BA2E00DB3597 /* menues.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625816788F9B00E35E54 /* menues.c */; };
-		2D47FB2216C6BA2E00DB3597 /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626116788F9B00E35E54 /* player.c */; };
-		2D47FB2316C6BA2E00DB3597 /* premap.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626216788F9B00E35E54 /* premap.c */; };
-		2D47FB2416C6BA2E00DB3597 /* rts.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626316788F9B00E35E54 /* rts.c */; };
-		2D47FB2516C6BA2E00DB3597 /* scriplib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626516788F9B00E35E54 /* scriplib.c */; };
-		2D47FB2616C6BA2E00DB3597 /* sector.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626716788F9B00E35E54 /* sector.c */; };
-		2D47FB2716C6BA2E00DB3597 /* sounds.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626A16788F9B00E35E54 /* sounds.c */; };
-		2D47FB2816C6BA2E00DB3597 /* dummy_audiolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62FE16790E8000E35E54 /* dummy_audiolib.c */; };
-		2D47FB2916C6BA6F00DB3597 /* pitch.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17DF167ADE1F00E1BBA1 /* pitch.c */; };
-		2D47FB2A16C6BA6F00DB3597 /* dsl.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17CE167AD6A500E1BBA1 /* dsl.c */; };
-		2D47FB2B16C6BA6F00DB3597 /* fx_man.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17CF167AD6A500E1BBA1 /* fx_man.c */; };
-		2D47FB2C16C6BA6F00DB3597 /* ll_man.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D0167AD6A500E1BBA1 /* ll_man.c */; };
-		2D47FB2D16C6BA6F00DB3597 /* multivoc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D1167AD6A500E1BBA1 /* multivoc.c */; };
-		2D47FB2E16C6BA6F00DB3597 /* mv_mix.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D2167AD6A500E1BBA1 /* mv_mix.c */; };
-		2D47FB2F16C6BA6F00DB3597 /* mvreverb.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D3167AD6A500E1BBA1 /* mvreverb.c */; };
-		2D47FB3016C6BA6F00DB3597 /* nodpmi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D4167AD6A500E1BBA1 /* nodpmi.c */; };
-		2D47FB3116C6BA6F00DB3597 /* user.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D6167AD6A500E1BBA1 /* user.c */; };
-		2D47FB3216C6BA6F00DB3597 /* sdl_midi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D4FB6FE167D430F00915887 /* sdl_midi.c */; };
 		2D47FB3316C6BA8200DB3597 /* cache.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61F41678885A00E35E54 /* cache.c */; };
 		2D47FB3416C6BA8200DB3597 /* display.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B621C1678885A00E35E54 /* display.c */; };
 		2D47FB3516C6BA8200DB3597 /* draw.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61F11678885A00E35E54 /* draw.c */; };
@@ -62,7 +34,6 @@
 		2D47FB4916C6BC2200DB3597 /* SDL_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D7B623216788AAB00E35E54 /* SDL_mixer.framework */; };
 		2D47FB4A16C6BC2200DB3597 /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D7B623016788A9B00E35E54 /* SDL.framework */; };
 		2D47FB4E16C6BF1C00DB3597 /* duke_3d_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2D47FB4D16C6BF1C00DB3597 /* duke_3d_icon.icns */; };
-		2D4FB6FF167D430F00915887 /* sdl_midi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D4FB6FE167D430F00915887 /* sdl_midi.c */; };
 		2D7B621D1678885A00E35E54 /* draw.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61F11678885A00E35E54 /* draw.c */; };
 		2D7B621E1678885A00E35E54 /* cache.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61F41678885A00E35E54 /* cache.c */; };
 		2D7B621F1678885A00E35E54 /* host.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61FA1678885A00E35E54 /* host.c */; };
@@ -79,37 +50,10 @@
 		2D7B623616788ACE00E35E54 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623416788AB200E35E54 /* Cocoa.framework */; };
 		2D7B623716788AE200E35E54 /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623216788AAB00E35E54 /* SDL_mixer.framework */; };
 		2D7B623816788AF800E35E54 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623016788A9B00E35E54 /* SDL.framework */; };
-		2D7B626E16788F9B00E35E54 /* actors.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B623C16788F9B00E35E54 /* actors.c */; };
-		2D7B626F16788F9B00E35E54 /* animlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B623D16788F9B00E35E54 /* animlib.c */; };
-		2D7B627016788F9B00E35E54 /* config.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B623F16788F9B00E35E54 /* config.c */; };
-		2D7B627116788F9B00E35E54 /* console.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B624116788F9B00E35E54 /* console.c */; };
-		2D7B627216788F9B00E35E54 /* control.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B624316788F9B00E35E54 /* control.c */; };
-		2D7B627316788F9B00E35E54 /* cvar_defs.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B624516788F9B00E35E54 /* cvar_defs.c */; };
-		2D7B627416788F9B00E35E54 /* cvars.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B624716788F9B00E35E54 /* cvars.c */; };
 		2D7B627516788F9B00E35E54 /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625016788F9B00E35E54 /* game.c */; };
-		2D7B627616788F9B00E35E54 /* gamedef.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625216788F9B00E35E54 /* gamedef.c */; };
-		2D7B627716788F9B00E35E54 /* global.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625416788F9B00E35E54 /* global.c */; };
-		2D7B627816788F9B00E35E54 /* keyboard.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625616788F9B00E35E54 /* keyboard.c */; };
-		2D7B627916788F9B00E35E54 /* menues.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625816788F9B00E35E54 /* menues.c */; };
-		2D7B627C16788F9B00E35E54 /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626116788F9B00E35E54 /* player.c */; };
-		2D7B627D16788F9B00E35E54 /* premap.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626216788F9B00E35E54 /* premap.c */; };
-		2D7B627E16788F9B00E35E54 /* rts.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626316788F9B00E35E54 /* rts.c */; };
-		2D7B627F16788F9B00E35E54 /* scriplib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626516788F9B00E35E54 /* scriplib.c */; };
-		2D7B628016788F9B00E35E54 /* sector.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626716788F9B00E35E54 /* sector.c */; };
-		2D7B628116788F9B00E35E54 /* sounds.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B626A16788F9B00E35E54 /* sounds.c */; };
-		2D7B62FF16790E8100E35E54 /* dummy_audiolib.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62FE16790E8000E35E54 /* dummy_audiolib.c */; };
 		2D7B630116791C0300E35E54 /* dummy_multi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B630016791C0200E35E54 /* dummy_multi.c */; };
 		2D7B7AEE16792D6700DB503A /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B7AED16792D6700DB503A /* SDLMain.m */; };
 		2D7B7B121679325D00DB503A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B7B111679325D00DB503A /* CoreFoundation.framework */; };
-		2D7C17D7167AD6A500E1BBA1 /* dsl.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17CE167AD6A500E1BBA1 /* dsl.c */; };
-		2D7C17D8167AD6A500E1BBA1 /* fx_man.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17CF167AD6A500E1BBA1 /* fx_man.c */; };
-		2D7C17D9167AD6A500E1BBA1 /* ll_man.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D0167AD6A500E1BBA1 /* ll_man.c */; };
-		2D7C17DA167AD6A500E1BBA1 /* multivoc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D1167AD6A500E1BBA1 /* multivoc.c */; };
-		2D7C17DB167AD6A500E1BBA1 /* mv_mix.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D2167AD6A500E1BBA1 /* mv_mix.c */; };
-		2D7C17DC167AD6A500E1BBA1 /* mvreverb.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D3167AD6A500E1BBA1 /* mvreverb.c */; };
-		2D7C17DD167AD6A500E1BBA1 /* nodpmi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D4167AD6A500E1BBA1 /* nodpmi.c */; };
-		2D7C17DE167AD6A500E1BBA1 /* user.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17D6167AD6A500E1BBA1 /* user.c */; };
-		2D7C17E0167ADE2000E1BBA1 /* pitch.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7C17DF167ADE1F00E1BBA1 /* pitch.c */; };
 		51516E1816E3BBED00A480FC /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623216788AAB00E35E54 /* SDL_mixer.framework */; };
 		51516E1916E3BBED00A480FC /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623016788A9B00E35E54 /* SDL.framework */; };
 /* End PBXBuildFile section */
@@ -142,9 +86,6 @@
 		2D058BCF1686520B00E283DC /* tiles.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tiles.c; path = ../../Engine/src/tiles.c; sourceTree = "<group>"; };
 		2D058BE2168689A500E283DC /* network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = network.h; path = ../../Engine/src/network.h; sourceTree = "<group>"; };
 		2D058BE3168689B200E283DC /* network.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = network.c; path = ../../Engine/src/network.c; sourceTree = "<group>"; };
-		2D2A07B8167EFA4900064107 /* music.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = music.h; path = ../../Game/src/audiolib/music.h; sourceTree = "<group>"; };
-		2D2A07BA167EFB5500064107 /* premap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = premap.h; path = ../../Game/src/premap.h; sourceTree = "<group>"; };
-		2D2A07BB167F1ABA00064107 /* global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = global.h; path = ../../Game/src/global.h; sourceTree = "<group>"; };
 		2D2A07C9168286D400064107 /* filesystem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = filesystem.c; path = ../../Engine/src/filesystem.c; sourceTree = "<group>"; };
 		2D2A07CB168286F200064107 /* filesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = filesystem.h; path = ../../Engine/src/filesystem.h; sourceTree = "<group>"; };
 		2D47FADE16C6B94600DB3597 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -157,7 +98,6 @@
 		2D47FB0916C6BA0D00DB3597 /* Duke3DBundle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Duke3DBundle-Prefix.pch"; sourceTree = "<group>"; };
 		2D47FB0B16C6BA0D00DB3597 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2D47FB4D16C6BF1C00DB3597 /* duke_3d_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = duke_3d_icon.icns; sourceTree = "<group>"; };
-		2D4FB6FE167D430F00915887 /* sdl_midi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sdl_midi.c; sourceTree = "<group>"; };
 		2D7B61DE167886FB00E35E54 /* Duke3D */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Duke3D; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7B61F11678885A00E35E54 /* draw.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = draw.c; path = ../../Engine/src/draw.c; sourceTree = "<group>"; };
 		2D7B61F21678885A00E35E54 /* draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = draw.h; path = ../../Engine/src/draw.h; sourceTree = "<group>"; };
@@ -193,69 +133,11 @@
 		2D7B623016788A9B00E35E54 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = /Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
 		2D7B623216788AAB00E35E54 /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = /Library/Frameworks/SDL_mixer.framework; sourceTree = "<absolute>"; };
 		2D7B623416788AB200E35E54 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		2D7B623A16788F9B00E35E54 /* _functio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _functio.h; path = ../../Game/src/_functio.h; sourceTree = "<group>"; };
-		2D7B623B16788F9B00E35E54 /* _rts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _rts.h; path = ../../Game/src/_rts.h; sourceTree = "<group>"; };
-		2D7B623C16788F9B00E35E54 /* actors.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = actors.c; path = ../../Game/src/actors.c; sourceTree = "<group>"; };
-		2D7B623D16788F9B00E35E54 /* animlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = animlib.c; path = ../../Game/src/animlib.c; sourceTree = "<group>"; };
-		2D7B623E16788F9B00E35E54 /* animlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = animlib.h; path = ../../Game/src/animlib.h; sourceTree = "<group>"; };
-		2D7B623F16788F9B00E35E54 /* config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = config.c; path = ../../Game/src/config.c; sourceTree = "<group>"; };
-		2D7B624016788F9B00E35E54 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../Game/src/config.h; sourceTree = "<group>"; };
-		2D7B624116788F9B00E35E54 /* console.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = console.c; path = ../../Game/src/console.c; sourceTree = "<group>"; };
-		2D7B624216788F9B00E35E54 /* console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = console.h; path = ../../Game/src/console.h; sourceTree = "<group>"; };
-		2D7B624316788F9B00E35E54 /* control.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = control.c; path = ../../Game/src/control.c; sourceTree = "<group>"; };
-		2D7B624416788F9B00E35E54 /* control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = control.h; path = ../../Game/src/control.h; sourceTree = "<group>"; };
-		2D7B624516788F9B00E35E54 /* cvar_defs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cvar_defs.c; path = ../../Game/src/cvar_defs.c; sourceTree = "<group>"; };
-		2D7B624616788F9B00E35E54 /* cvar_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cvar_defs.h; path = ../../Game/src/cvar_defs.h; sourceTree = "<group>"; };
-		2D7B624716788F9B00E35E54 /* cvars.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cvars.c; path = ../../Game/src/cvars.c; sourceTree = "<group>"; };
-		2D7B624816788F9B00E35E54 /* cvars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cvars.h; path = ../../Game/src/cvars.h; sourceTree = "<group>"; };
-		2D7B624916788F9B00E35E54 /* DbgHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DbgHelp.h; path = ../../Game/src/DbgHelp.h; sourceTree = "<group>"; };
-		2D7B624A16788F9B00E35E54 /* develop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = develop.h; path = ../../Game/src/develop.h; sourceTree = "<group>"; };
-		2D7B624B16788F9B00E35E54 /* duke3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = duke3d.h; path = ../../Game/src/duke3d.h; sourceTree = "<group>"; };
-		2D7B624C16788F9B00E35E54 /* dukewin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dukewin.h; path = ../../Game/src/dukewin.h; sourceTree = "<group>"; };
-		2D7B624D16788F9B00E35E54 /* file_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = file_lib.h; path = ../../Game/src/file_lib.h; sourceTree = "<group>"; };
-		2D7B624E16788F9B00E35E54 /* funct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = funct.h; path = ../../Game/src/funct.h; sourceTree = "<group>"; };
-		2D7B624F16788F9B00E35E54 /* function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = function.h; path = ../../Game/src/function.h; sourceTree = "<group>"; };
 		2D7B625016788F9B00E35E54 /* game.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = game.c; path = ../../Game/src/game.c; sourceTree = "<group>"; };
-		2D7B625116788F9B00E35E54 /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = game.h; path = ../../Game/src/game.h; sourceTree = "<group>"; };
-		2D7B625216788F9B00E35E54 /* gamedef.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = gamedef.c; path = ../../Game/src/gamedef.c; sourceTree = "<group>"; };
-		2D7B625316788F9B00E35E54 /* gamedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gamedefs.h; path = ../../Game/src/gamedefs.h; sourceTree = "<group>"; };
-		2D7B625416788F9B00E35E54 /* global.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = global.c; path = ../../Game/src/global.c; sourceTree = "<group>"; };
-		2D7B625516788F9B00E35E54 /* joystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = joystick.h; path = ../../Game/src/joystick.h; sourceTree = "<group>"; };
-		2D7B625616788F9B00E35E54 /* keyboard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = keyboard.c; path = ../../Game/src/keyboard.c; sourceTree = "<group>"; };
-		2D7B625716788F9B00E35E54 /* keyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = keyboard.h; path = ../../Game/src/keyboard.h; sourceTree = "<group>"; };
-		2D7B625816788F9B00E35E54 /* menues.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = menues.c; path = ../../Game/src/menues.c; sourceTree = "<group>"; };
-		2D7B625F16788F9B00E35E54 /* mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mouse.h; path = ../../Game/src/mouse.h; sourceTree = "<group>"; };
-		2D7B626016788F9B00E35E54 /* names.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = names.h; path = ../../Game/src/names.h; sourceTree = "<group>"; };
-		2D7B626116788F9B00E35E54 /* player.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = player.c; path = ../../Game/src/player.c; sourceTree = "<group>"; };
-		2D7B626216788F9B00E35E54 /* premap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = premap.c; path = ../../Game/src/premap.c; sourceTree = "<group>"; };
-		2D7B626316788F9B00E35E54 /* rts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = rts.c; path = ../../Game/src/rts.c; sourceTree = "<group>"; };
-		2D7B626416788F9B00E35E54 /* rts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = rts.h; path = ../../Game/src/rts.h; sourceTree = "<group>"; };
-		2D7B626516788F9B00E35E54 /* scriplib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scriplib.c; path = ../../Game/src/scriplib.c; sourceTree = "<group>"; };
-		2D7B626616788F9B00E35E54 /* scriplib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scriplib.h; path = ../../Game/src/scriplib.h; sourceTree = "<group>"; };
-		2D7B626716788F9B00E35E54 /* sector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sector.c; path = ../../Game/src/sector.c; sourceTree = "<group>"; };
-		2D7B626816788F9B00E35E54 /* sounddebugdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sounddebugdefs.h; path = ../../Game/src/sounddebugdefs.h; sourceTree = "<group>"; };
-		2D7B626916788F9B00E35E54 /* soundefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = soundefs.h; path = ../../Game/src/soundefs.h; sourceTree = "<group>"; };
-		2D7B626A16788F9B00E35E54 /* sounds.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sounds.c; path = ../../Game/src/sounds.c; sourceTree = "<group>"; };
-		2D7B626B16788F9B00E35E54 /* sounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sounds.h; path = ../../Game/src/sounds.h; sourceTree = "<group>"; };
-		2D7B626C16788F9B00E35E54 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = ../../Game/src/types.h; sourceTree = "<group>"; };
-		2D7B626D16788F9B00E35E54 /* util_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = util_lib.h; path = ../../Game/src/util_lib.h; sourceTree = "<group>"; };
-		2D7B62FD167905C400E35E54 /* dukeunix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dukeunix.h; path = ../../Game/src/dukeunix.h; sourceTree = "<group>"; };
-		2D7B62FE16790E8000E35E54 /* dummy_audiolib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dummy_audiolib.c; path = ../../Game/src/dummy_audiolib.c; sourceTree = "<group>"; };
 		2D7B630016791C0200E35E54 /* dummy_multi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dummy_multi.c; path = ../../Engine/src/dummy_multi.c; sourceTree = "<group>"; };
 		2D7B7AED16792D6700DB503A /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
 		2D7B7AEF16792D8900DB503A /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
 		2D7B7B111679325D00DB503A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		2D7C17CD167AD6A500E1BBA1 /* assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = assert.h; path = ../../Game/src/audiolib/assert.h; sourceTree = "<group>"; };
-		2D7C17CE167AD6A500E1BBA1 /* dsl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dsl.c; path = ../../Game/src/audiolib/dsl.c; sourceTree = "<group>"; };
-		2D7C17CF167AD6A500E1BBA1 /* fx_man.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fx_man.c; path = ../../Game/src/audiolib/fx_man.c; sourceTree = "<group>"; };
-		2D7C17D0167AD6A500E1BBA1 /* ll_man.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ll_man.c; path = ../../Game/src/audiolib/ll_man.c; sourceTree = "<group>"; };
-		2D7C17D1167AD6A500E1BBA1 /* multivoc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = multivoc.c; path = ../../Game/src/audiolib/multivoc.c; sourceTree = "<group>"; };
-		2D7C17D2167AD6A500E1BBA1 /* mv_mix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mv_mix.c; path = ../../Game/src/audiolib/mv_mix.c; sourceTree = "<group>"; };
-		2D7C17D3167AD6A500E1BBA1 /* mvreverb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mvreverb.c; path = ../../Game/src/audiolib/mvreverb.c; sourceTree = "<group>"; };
-		2D7C17D4167AD6A500E1BBA1 /* nodpmi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nodpmi.c; path = ../../Game/src/audiolib/nodpmi.c; sourceTree = "<group>"; };
-		2D7C17D5167AD6A500E1BBA1 /* pitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = pitch.h; path = ../../Game/src/audiolib/pitch.h; sourceTree = "<group>"; };
-		2D7C17D6167AD6A500E1BBA1 /* user.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = user.c; path = ../../Game/src/audiolib/user.c; sourceTree = "<group>"; };
-		2D7C17DF167ADE1F00E1BBA1 /* pitch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pitch.c; path = ../../Game/src/audiolib/pitch.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,37 +213,6 @@
 		2D2A07CF16828B7600064107 /* headers */ = {
 			isa = PBXGroup;
 			children = (
-				2D7B623A16788F9B00E35E54 /* _functio.h */,
-				2D7B623B16788F9B00E35E54 /* _rts.h */,
-				2D7B623E16788F9B00E35E54 /* animlib.h */,
-				2D7B624016788F9B00E35E54 /* config.h */,
-				2D7B624216788F9B00E35E54 /* console.h */,
-				2D7B624416788F9B00E35E54 /* control.h */,
-				2D7B624616788F9B00E35E54 /* cvar_defs.h */,
-				2D7B624816788F9B00E35E54 /* cvars.h */,
-				2D7B624916788F9B00E35E54 /* DbgHelp.h */,
-				2D7B624A16788F9B00E35E54 /* develop.h */,
-				2D7B624B16788F9B00E35E54 /* duke3d.h */,
-				2D7B62FD167905C400E35E54 /* dukeunix.h */,
-				2D7B624C16788F9B00E35E54 /* dukewin.h */,
-				2D7B624D16788F9B00E35E54 /* file_lib.h */,
-				2D7B624E16788F9B00E35E54 /* funct.h */,
-				2D7B624F16788F9B00E35E54 /* function.h */,
-				2D7B625116788F9B00E35E54 /* game.h */,
-				2D7B625316788F9B00E35E54 /* gamedefs.h */,
-				2D2A07BB167F1ABA00064107 /* global.h */,
-				2D7B625516788F9B00E35E54 /* joystick.h */,
-				2D7B625716788F9B00E35E54 /* keyboard.h */,
-				2D7B625F16788F9B00E35E54 /* mouse.h */,
-				2D7B626016788F9B00E35E54 /* names.h */,
-				2D2A07BA167EFB5500064107 /* premap.h */,
-				2D7B626416788F9B00E35E54 /* rts.h */,
-				2D7B626616788F9B00E35E54 /* scriplib.h */,
-				2D7B626816788F9B00E35E54 /* sounddebugdefs.h */,
-				2D7B626916788F9B00E35E54 /* soundefs.h */,
-				2D7B626B16788F9B00E35E54 /* sounds.h */,
-				2D7B626C16788F9B00E35E54 /* types.h */,
-				2D7B626D16788F9B00E35E54 /* util_lib.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -369,25 +220,7 @@
 		2D2A07D016828B7C00064107 /* implementations */ = {
 			isa = PBXGroup;
 			children = (
-				2D7B623C16788F9B00E35E54 /* actors.c */,
-				2D7B623D16788F9B00E35E54 /* animlib.c */,
-				2D7B623F16788F9B00E35E54 /* config.c */,
-				2D7B624116788F9B00E35E54 /* console.c */,
-				2D7B624316788F9B00E35E54 /* control.c */,
-				2D7B624516788F9B00E35E54 /* cvar_defs.c */,
-				2D7B624716788F9B00E35E54 /* cvars.c */,
 				2D7B625016788F9B00E35E54 /* game.c */,
-				2D7B625216788F9B00E35E54 /* gamedef.c */,
-				2D7B625416788F9B00E35E54 /* global.c */,
-				2D7B625616788F9B00E35E54 /* keyboard.c */,
-				2D7B625816788F9B00E35E54 /* menues.c */,
-				2D7B626116788F9B00E35E54 /* player.c */,
-				2D7B626216788F9B00E35E54 /* premap.c */,
-				2D7B626316788F9B00E35E54 /* rts.c */,
-				2D7B626516788F9B00E35E54 /* scriplib.c */,
-				2D7B626716788F9B00E35E54 /* sector.c */,
-				2D7B626A16788F9B00E35E54 /* sounds.c */,
-				2D7B62FE16790E8000E35E54 /* dummy_audiolib.c */,
 			);
 			name = implementations;
 			sourceTree = "<group>";
@@ -512,38 +345,8 @@
 			children = (
 				2D2A07CF16828B7600064107 /* headers */,
 				2D2A07D016828B7C00064107 /* implementations */,
-				2D7C17CC167AD65800E1BBA1 /* Audiolib */,
-				2D7B625916788F9B00E35E54 /* midi */,
 			);
 			name = Game;
-			sourceTree = "<group>";
-		};
-		2D7B625916788F9B00E35E54 /* midi */ = {
-			isa = PBXGroup;
-			children = (
-				2D4FB6FE167D430F00915887 /* sdl_midi.c */,
-			);
-			name = midi;
-			path = ../../Game/src/midi;
-			sourceTree = "<group>";
-		};
-		2D7C17CC167AD65800E1BBA1 /* Audiolib */ = {
-			isa = PBXGroup;
-			children = (
-				2D2A07B8167EFA4900064107 /* music.h */,
-				2D7C17DF167ADE1F00E1BBA1 /* pitch.c */,
-				2D7C17CD167AD6A500E1BBA1 /* assert.h */,
-				2D7C17CE167AD6A500E1BBA1 /* dsl.c */,
-				2D7C17CF167AD6A500E1BBA1 /* fx_man.c */,
-				2D7C17D0167AD6A500E1BBA1 /* ll_man.c */,
-				2D7C17D1167AD6A500E1BBA1 /* multivoc.c */,
-				2D7C17D2167AD6A500E1BBA1 /* mv_mix.c */,
-				2D7C17D3167AD6A500E1BBA1 /* mvreverb.c */,
-				2D7C17D4167AD6A500E1BBA1 /* nodpmi.c */,
-				2D7C17D5167AD6A500E1BBA1 /* pitch.h */,
-				2D7C17D6167AD6A500E1BBA1 /* user.c */,
-			);
-			name = Audiolib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -646,35 +449,7 @@
 				2D47FB4116C6BA8200DB3597 /* tiles.c in Sources */,
 				2D47FB4216C6BA8200DB3597 /* network.c in Sources */,
 				2D47FB4316C6BA8200DB3597 /* SDLMain.m in Sources */,
-				2D47FB2916C6BA6F00DB3597 /* pitch.c in Sources */,
-				2D47FB2A16C6BA6F00DB3597 /* dsl.c in Sources */,
-				2D47FB2B16C6BA6F00DB3597 /* fx_man.c in Sources */,
-				2D47FB2C16C6BA6F00DB3597 /* ll_man.c in Sources */,
-				2D47FB2D16C6BA6F00DB3597 /* multivoc.c in Sources */,
-				2D47FB2E16C6BA6F00DB3597 /* mv_mix.c in Sources */,
-				2D47FB2F16C6BA6F00DB3597 /* mvreverb.c in Sources */,
-				2D47FB3016C6BA6F00DB3597 /* nodpmi.c in Sources */,
-				2D47FB3116C6BA6F00DB3597 /* user.c in Sources */,
-				2D47FB3216C6BA6F00DB3597 /* sdl_midi.c in Sources */,
-				2D47FB1616C6BA2E00DB3597 /* actors.c in Sources */,
-				2D47FB1716C6BA2E00DB3597 /* animlib.c in Sources */,
-				2D47FB1816C6BA2E00DB3597 /* config.c in Sources */,
-				2D47FB1916C6BA2E00DB3597 /* console.c in Sources */,
-				2D47FB1A16C6BA2E00DB3597 /* control.c in Sources */,
-				2D47FB1B16C6BA2E00DB3597 /* cvar_defs.c in Sources */,
-				2D47FB1C16C6BA2E00DB3597 /* cvars.c in Sources */,
 				2D47FB1D16C6BA2E00DB3597 /* game.c in Sources */,
-				2D47FB1E16C6BA2E00DB3597 /* gamedef.c in Sources */,
-				2D47FB1F16C6BA2E00DB3597 /* global.c in Sources */,
-				2D47FB2016C6BA2E00DB3597 /* keyboard.c in Sources */,
-				2D47FB2116C6BA2E00DB3597 /* menues.c in Sources */,
-				2D47FB2216C6BA2E00DB3597 /* player.c in Sources */,
-				2D47FB2316C6BA2E00DB3597 /* premap.c in Sources */,
-				2D47FB2416C6BA2E00DB3597 /* rts.c in Sources */,
-				2D47FB2516C6BA2E00DB3597 /* scriplib.c in Sources */,
-				2D47FB2616C6BA2E00DB3597 /* sector.c in Sources */,
-				2D47FB2716C6BA2E00DB3597 /* sounds.c in Sources */,
-				2D47FB2816C6BA2E00DB3597 /* dummy_audiolib.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,37 +470,9 @@
 				2D7B62271678885A00E35E54 /* engine.c in Sources */,
 				2D7B622C1678885A00E35E54 /* fixedPoint_math.c in Sources */,
 				2D7B622D1678885A00E35E54 /* display.c in Sources */,
-				2D7B626E16788F9B00E35E54 /* actors.c in Sources */,
-				2D7B626F16788F9B00E35E54 /* animlib.c in Sources */,
-				2D7B627016788F9B00E35E54 /* config.c in Sources */,
-				2D7B627116788F9B00E35E54 /* console.c in Sources */,
-				2D7B627216788F9B00E35E54 /* control.c in Sources */,
-				2D7B627316788F9B00E35E54 /* cvar_defs.c in Sources */,
-				2D7B627416788F9B00E35E54 /* cvars.c in Sources */,
 				2D7B627516788F9B00E35E54 /* game.c in Sources */,
-				2D7B627616788F9B00E35E54 /* gamedef.c in Sources */,
-				2D7B627716788F9B00E35E54 /* global.c in Sources */,
-				2D7B627816788F9B00E35E54 /* keyboard.c in Sources */,
-				2D7B627916788F9B00E35E54 /* menues.c in Sources */,
-				2D7B627C16788F9B00E35E54 /* player.c in Sources */,
-				2D7B627D16788F9B00E35E54 /* premap.c in Sources */,
-				2D7B627E16788F9B00E35E54 /* rts.c in Sources */,
-				2D7B627F16788F9B00E35E54 /* scriplib.c in Sources */,
-				2D7B628016788F9B00E35E54 /* sector.c in Sources */,
-				2D7B628116788F9B00E35E54 /* sounds.c in Sources */,
-				2D7B62FF16790E8100E35E54 /* dummy_audiolib.c in Sources */,
 				2D7B630116791C0300E35E54 /* dummy_multi.c in Sources */,
 				2D7B7AEE16792D6700DB503A /* SDLMain.m in Sources */,
-				2D7C17D7167AD6A500E1BBA1 /* dsl.c in Sources */,
-				2D7C17D8167AD6A500E1BBA1 /* fx_man.c in Sources */,
-				2D7C17D9167AD6A500E1BBA1 /* ll_man.c in Sources */,
-				2D7C17DA167AD6A500E1BBA1 /* multivoc.c in Sources */,
-				2D7C17DB167AD6A500E1BBA1 /* mv_mix.c in Sources */,
-				2D7C17DC167AD6A500E1BBA1 /* mvreverb.c in Sources */,
-				2D7C17DD167AD6A500E1BBA1 /* nodpmi.c in Sources */,
-				2D7C17DE167AD6A500E1BBA1 /* user.c in Sources */,
-				2D7C17E0167ADE2000E1BBA1 /* pitch.c in Sources */,
-				2D4FB6FF167D430F00915887 /* sdl_midi.c in Sources */,
 				2D2A07CA168286D500064107 /* filesystem.c in Sources */,
 				2D058BD01686520B00E283DC /* tiles.c in Sources */,
 				2D058BE4168689B200E283DC /* network.c in Sources */,

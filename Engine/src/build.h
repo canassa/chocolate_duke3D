@@ -359,6 +359,8 @@ OTHER VARIABLES:
 void Error (int errorType, char  *error, ...);
 int FindDistance2D(int ix, int iy);
 
+#define main SDL_main
+
 #endif  /* defined _INCLUDE_BUILD_H_ */
 
 /* end of build.h ... */

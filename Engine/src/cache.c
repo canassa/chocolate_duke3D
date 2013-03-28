@@ -20,7 +20,7 @@
 #include "cache.h"
 #include "build.h"
 
-#include "../../Game/src/cvar_defs.h"
+//#include "../../Game/src/cvar_defs.h"
 
 #include "types.h"
 
