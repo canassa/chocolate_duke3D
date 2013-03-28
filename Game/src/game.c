@@ -78,10 +78,6 @@ uint8_t  qe,cp;
 
 uint8_t  nHostForceDisableAutoaim = 0;
 
-// Game play speed
-int g_iTickRate = 120;
-int g_iTicksPerFrame = 26;
-
 int32 CommandSoundToggleOff = 0;
 int32 CommandMusicToggleOff = 0;
 
@@ -8501,26 +8497,9 @@ void findGRPToUse(char *groupfilefullpath)
 
 #endif
 
-static int load_duke3d_groupfile(void)
-{
-    // FIX_00032: Added multi base GRP manager. Use duke3d*.grp to handle multiple grp.
-
-    /*
-    char  groupfilefullpath[512];
-    groupfilefullpath[0] = '\0';
-
-    findGRPToUse(groupfilefullpath);
-
-    if (groupfilefullpath[0] == '\0') {
-        return false;
-    }
-
-
-    FixFilePath(groupfilefullpath);
-    */
-
-    return(initgroupfile("/Users/cesar/apps/chocolate_duke3D/bin/DUKE3D.GRP") != -1);
-}
+// Game play speed
+int g_iTickRate = 120;
+int g_iTicksPerFrame = 26;
 
 int main (int argc, char **argv)
 {
@@ -8530,20 +8509,28 @@ int main (int argc, char **argv)
     
     printf("teste\n");
     
-    load_duke3d_groupfile();
+    initgroupfile("/Users/cesar/apps/chocolate_duke3D/bin/DUKE3D.GRP");
     
     _platform_init(argc, argv, "Duke Nukem 3D", "Duke3D");
     
     //RegisterShutdownFunction( ShutDown );
+
     
-    Startup();
+    initengine();
+    // CTW END - MODIFICATION
+    inittimer(TICRATE);
+    
+    puts("Loading art header.");
+    
+    loadpics("tiles000.art", "\0");
+    //Startup();
     //inittimer(TICRATE);
     //loadpics("tiles000.art", "\0");
     loadboard("/Users/cesar/simple.map", &pos_x, &pos_y, &pos_z, &ang, &sector_num);
 
     //initengine();
     setgamemode(2,1024,640);
-    genspriteremaps();
+    //genspriteremaps();
     setbrightness(7, &palette[0]);
 
     //newgame(ud.m_volume_number,ud.m_level_number,ud.m_player_skill);
@@ -8560,434 +8547,6 @@ int main (int argc, char **argv)
     }
 }
 
-int main2 (int argc,char  **argv)
-{
-    int32_t i, j;
-    int32_t filehandle;
-
-
-    uint8_t  kbdKey;
-    uint8_t  *exe;
-
-
-    //printf(   "This is a debug version 19.7.1 only Based on 19.7\n"
-    //      "Fully compliant with v19.7. Added the following:\n\n"
-    //      "FIX_00086: grp loaded by smaller sucessive chunks to avoid\n"
-    //      "           overloading low ram computers (Spanator)\n"
-    //      "FIX_00087: intro in 1024x768 mode being slow. Undone FIX_00070\n"
-    //      "           and fixed font issue again (Bryzian)\n"
-    //      "FIX_00088: crash on maps using a bad palette index like the end\n"
-    //      "           of roch3.map (NY00123)\n"
-    //      "FIX_00089: scoreboard not shown for last player who quits a DM.\n"
-    //      "           Only 19.7 affected. (Sarah)\n"
-    //      "FIX_00090: Removed showinfo key. FPS were shown after CRC msg. \n"
-    //      "           CRC not always removed. (Turrican)\n"
-    //      "FIX_00091: Main theme starting too early (Bryzian/Turrican)\n"
-    //      "FIX_00092: corrupted saved files making the following saved\n"
-    //      "           files invisible (Bryzian)\n\n"
-    //      "This version should not be distributed. It's not secret but it\n"
-    //      "would create a bad mess in the duke community if people start\n"
-    //      "using it as it may contain new unsuspected bugs. Only a select\n"
-    //      "group of known dukers who know what they are doing should be using\n"
-    //      "it. Please report new bugs at xd@m-klein.com or on DX forums. Thx!\n\n");
-
-    //printf("*** Chocolate DukeNukem3D v%d.%d ***\n\n", CHOCOLATE_DUKE_REV_X, CHOCOLATE_DUKE_REV_DOT_Y);
-
-    // FIX_00033: Fake multi and AI are now fully working
-    ud.multimode = 1;  // xduke: must be done before checkcommandline or that will prevent Fakeplayer and AI
-
-    load_duke3d_groupfile();
-
-    // FIX_00022: Automatically recognize the shareware grp (v1.3) + full version (1.3d) +
-    //            atomic (1.4/1.5 grp) and the con files version (either 1.3 or 1.4) (JonoF's idea)
-
-    // Detecting grp version
-    // We keep the old GRP scheme detection for 19.6 compliance. Will be obsolete.
-    /*
-    filehandle = kopen4load("DUKEDC9.MAP",1);
-    kclose(filehandle);
-
-    if (filehandle == -1) { // not DC pack
-        filehandle = kopen4load("DUKESW.BIN",1);
-        kclose(filehandle);
-
-        if (filehandle == -1) { // not Shareware version 1.3
-            filehandle = kopen4load("E4L11.MAP",1);
-            kclose(filehandle);
-
-            if (filehandle == -1) { // not Atomic Edition 1.4/1.5
-                filehandle = kopen4load("E3L11.MAP",1);
-                kclose(filehandle);
-
-                if (filehandle == -1) { // not Regular version 1.3d
-                    grpVersion = UNKNOWN_GRP;
-                } else {
-                    grpVersion = REGULAR_GRP13D;
-                }
-            } else {
-                grpVersion = ATOMIC_GRP14_15;
-            }
-        } else {
-            grpVersion = SHAREWARE_GRP13;
-        }
-    } else {
-        grpVersion = DUKEITOUTINDC_GRP;
-    }
-     */
-
-    /*
-    // FIX_00062: Better support and identification for GRP and CON files for 1.3/1.3d/1.4/1.5
-    if (    groupefil_crc32[0]==CRC_BASE_GRP_SHAREWARE_13 ||
-            groupefil_crc32[0]==CRC_BASE_GRP_FULL_13 ||
-            groupefil_crc32[0]==CRC_BASE_GRP_PLUTONIUM_14 ||
-            groupefil_crc32[0]==CRC_BASE_GRP_ATOMIC_15 ) {
-        printf("GRP identified as: %s\n", grpVersion2char_from_crc(groupefil_crc32[0]));
-    } else {
-        printf( "The content of your original BASE *.GRP is corrupted. CRC=%X\n"
-                "You may run in troubles. Official GRP are:\n\n", groupefil_crc32[0]);
-
-        for (i=0; i<MAX_KNOWN_GRP; i++) {
-            printf("%s -> CRC32=%X  Size=%d bytes\n", crc32lookup[i].name, crc32lookup[i].crc32, crc32lookup[i].size);
-        }
-
-        printf( "\nYou should try to get one of these GRP only as a base GRP\n"
-                "Do you want to continue anyway? (Y/N): ");
-        do {
-            kbdKey = getch() | ' ';
-        } while (kbdKey != 'y' && kbdKey != 'n');
-        printf("%c\n", kbdKey);
-
-        if (kbdKey == 'n') {
-            Error(EXIT_SUCCESS,"");
-        }
-    }
-     */
-
-    /*
-    // computing exe crc
-    ud.exeCRC[0] = 0;
-    exe = NULL;
-    filehandle = open(argv[0],O_BINARY|O_RDONLY);
-    if (filehandle!=-1) {
-        exe = malloc(filelength(filehandle));
-        if (exe) {
-            read(filehandle, exe, filelength(filehandle));
-            ud.exeCRC[0] = crc32_update(exe, filelength(filehandle), ud.exeCRC[0]);
-            free(exe);
-        }
-        close(filehandle);
-    }
-     */
-
-
-    //checkcommandline(argc,argv);
-
-    _platform_init(argc, argv, "Duke Nukem 3D", "Duke3D");
-
-    //totalmemory = Z_AvailHeap();
-
-    /*
-    if (memorycheckoveride == 0) {
-        if (totalmemory < (3162000-350000)) {
-            puts("You don't have enough free memory to run Duke Nukem 3D.");
-            puts("The DOS \"mem\" command should report 6,800K (or 6.8 megs)");
-            puts("of \"total memory free\".\n");
-            printf("Duke Nukem 3D requires %d more bytes to run.\n",3162000-350000-totalmemory);
-            Error(EXIT_SUCCESS, "");
-        }
-    } else {
-        printf("Using %d bytes for heap.\n",totalmemory);
-    }
-     */
-
-    //RegisterShutdownFunction( ShutDown );
-
-
-    Startup();
-
-    /*
-    if ( eightytwofifty && numplayers > 1 && (MusicDevice != NumSoundCards) ) {
-        puts("\n=========================================================================");
-        puts("WARNING: 8250 UART detected.");
-        puts("Music is being disabled and lower quality sound is being set.  We apologize");
-        puts("for this, but it is necessary to maintain high frame rates while trying to");
-        puts("play the game on an 8250.  We suggest upgrading to a 16550 or better UART");
-        puts("for maximum performance.  Press any key to continue.");
-        puts("=========================================================================\n");
-
-        while ( !KB_KeyWaiting() ) {
-            getpackets();
-        }
-    }
-     */
-
-    //if (g_bStun) {
-        //waitforeverybody();
-    //}
-    
-    
-
-        ud.m_level_number = 7;
-        ud.m_volume_number = 0;
-        ud.warp_on = 1;
-
-    //getnames();
-
-    
-    //if (ud.multimode > 1) {
-        //playerswhenstarted = ud.multimode;
-    //}
-
-    //ud.last_level = -1;
-
-    //RTS_Init(ud.rtsname);
-    //if (numlumps) {
-    //    printf("Using .RTS file:%s\n",ud.rtsname);
-    //}
-
-    //if (CONTROL_JoystickEnabled) {
-    //    CONTROL_CenterJoystick(CenterCenter,UpperLeft,LowerRight,CenterThrottle,CenterRudder);
-    //}
-
-    //puts("Loading palette/lookups.");
-    setgamemode(ScreenMode,ScreenWidth,ScreenHeight);
-    /*
-    if ( setgamemode(ScreenMode,ScreenWidth,ScreenHeight) < 0 ) {
-        printf("\nVESA driver for ( %i * %i ) not found/supported!\n",xdim,ydim);
-        ScreenMode = 2;
-        ScreenWidth = 320;
-        ScreenHeight = 200;
-        setgamemode(ScreenMode,ScreenWidth,ScreenHeight);
-    }
-     */
-
-
-    //printf("genspriteremaps()\n");
-    genspriteremaps();
-
-
-    setbrightness(ud.brightness>>2,&ps[myconnectindex].palette[0]);
-
-    if (KB_KeyPressed( sc_Escape ) ) {
-        gameexit(" ");
-    }
-
-    //FX_StopAllSounds();
-    //clearsoundlocks();
-
-    /*
-    if (ud.warp_on > 1 && ud.multimode < 2) {
-        clearview(0L);
-        ps[myconnectindex].palette = palette;
-        palto(0,0,0,0);
-        rotatesprite(320<<15,200<<15,65536L,0,LOADSCREEN,0,0,2+8+64,0,0,xdim-1,ydim-1);
-        menutext(160,105,0,0,"LOADING SAVED GAME...");
-        nextpage();
-
-        j = loadplayer(ud.warp_on-2);
-        if (j) {
-            ud.warp_on = 0;
-        }
-    }
-     */
-
-
-
-MAIN_LOOP_RESTART:
-/*
-    if (ud.warp_on == 0) { //if game is loaded without /V or /L cmd arguments.
-
-        if (numplayers > 1 && boardfilename[0] != 0) { //check if a user map is loaded and in multiplayer.
-            int c;
-
-            ud.level_number = ud.m_level_number = 7; // 7 = usermap.
-            ud.volume_number = ud.m_volume_number;
-            ud.player_skill = ud.m_player_skill;
-
-            switch (ud.m_coop) { //set item spawn options, as they would be if
-                    //game was started via main menu.
-                case 0:
-                    ud.respawn_inventory = ud.m_respawn_inventory = 1;
-                    ud.respawn_items = ud.m_respawn_items = 1;
-                    break;
-                case 1:
-                    ud.respawn_inventory = ud.m_respawn_inventory = 1;
-                    ud.respawn_items = ud.m_respawn_items = 0;
-                    break;
-                case 2:
-                    ud.respawn_inventory = ud.m_respawn_inventory = 0;
-                    ud.respawn_items = ud.m_respawn_items = 0;
-                    break;
-            }
-
-            if ( ud.m_player_skill == 4 ) {
-                ud.m_respawn_monsters = 1; //set skill
-            } else {
-                ud.m_respawn_monsters = 0;
-            }
-
-            waitforeverybody();
-
-            for (c=connecthead; c>=0; c=connectpoint2[c]) {
-                resetweapons(c);
-                resetinventory(c);
-            }
-
-            newgame(ud.m_volume_number,ud.m_level_number,ud.m_player_skill);
-
-            enterlevel(MODE_GAME); //start game.
-
-        } else {
-            Logo(); //play logo, (game must be started via menus).
-        }
-    }
-*/
-
-
-    //if (ud.warp_on == 1) { //if cmd arguments /V and /L are given.
-        /*
-        if (numplayers > 1) { //if in multiplayer reset everyones weapon status.
-            int c;
-
-            switch (ud.m_coop) { //set item spawn options, as they would be if
-                    //game was started via main menu.
-                case 0:
-                    ud.respawn_inventory = ud.m_respawn_inventory = 1;
-                    ud.respawn_items = ud.m_respawn_items = 1;
-                    break;
-                case 1:
-                    ud.respawn_inventory = ud.m_respawn_inventory = 1;
-                    ud.respawn_items = ud.m_respawn_items = 0;
-                    break;
-                case 2:
-                    ud.respawn_inventory = ud.m_respawn_inventory = 0;
-                    ud.respawn_items = ud.m_respawn_items = 0;
-                    break;
-            }
-
-            if ( ud.m_player_skill == 4 ) {
-                ud.m_respawn_monsters = 1; //set skill
-            } else {
-                ud.m_respawn_monsters = 0;
-            }
-
-            waitforeverybody();
-
-            for (c=connecthead; c>=0; c=connectpoint2[c]) {
-                resetweapons(c); //without this players would spawn with no weapon.
-                resetinventory(c);
-            }
-
-        }*/
-
-        newgame(ud.m_volume_number,ud.m_level_number,ud.m_player_skill);
-        enterlevel(MODE_GAME); //start game.
-
-    //} else {
-    //    vscrn();
-    //}
-
-    if ( ud.warp_on == 0 && playback() ) {
-        FX_StopAllSounds();
-        clearsoundlocks();
-        nomorelogohack = 1;
-        goto MAIN_LOOP_RESTART;
-    }
-
-    ud.warp_on = 0;
-
-    //The main game loop is here.
-    while ( !(ps[myconnectindex].gm&MODE_END) ) {
-        //sampletimer();
-        /*
-        if ( ud.recstat == 2 || ud.multimode > 1 || ( ud.show_help == 0 && (ps[myconnectindex].gm&MODE_MENU) != MODE_MENU ) )
-            if ( ps[myconnectindex].gm&MODE_GAME ) {
-                // (" It's stuck here ")
-                //printf("ps[myconnectindex].gm&MODE_GAME\n");
-                if ( moveloop() ) {
-                    continue;
-                }
-            }*/
-        /*
-        if ( ps[myconnectindex].gm&MODE_EOL || ps[myconnectindex].gm&MODE_RESTART ) {
-
-            if ( ps[myconnectindex].gm&MODE_EOL ) {
-                closedemowrite();
-
-                ready2send = 0;
-
-                i = ud.screen_size;
-                ud.screen_size = 0;
-                vscrn();
-                ud.screen_size = i;
-                dobonus(0);
-
-                if (ud.eog) {
-                    ud.eog = 0;
-                    if (ud.multimode < 2) {
-                        if (VOLUMEONE) {
-                            doorders();
-                        }
-
-                        ps[myconnectindex].gm = MODE_MENU;
-                        cmenu(0);
-                        probey = 0;
-                        goto MAIN_LOOP_RESTART;
-                    } else {
-                        ud.m_level_number = 0;
-                        ud.level_number = 0;
-                    }
-                }
-            }
-
-            ready2send = 0;
-            if (numplayers > 1) {
-                ps[myconnectindex].gm = MODE_GAME;
-            }
-
-            enterlevel(ps[myconnectindex].gm);
-            continue;
-        }*/
-
-        //cheats();
-
-        //if ( !CONSOLE_IsActive() ) {
-        //    nonsharedkeys();
-        //}
-
-
-        //if ( (ud.show_help == 0 && ud.multimode < 2 && !(ps[myconnectindex].gm&MODE_MENU) ) || ud.multimode > 1 || ud.recstat == 2) {
-        //    i = min(max((totalclock-ototalclock)*(65536L/TICSPERFRAME),0),65536);
-        //} else {
-        //    i = 65536;
-        //}
-        
-        EngineState *ee = displayrooms(screenpeek,i);
-
-        //displayrest(i, ee);
-
-        /*
-        if (ps[myconnectindex].gm&MODE_DEMO) {
-            goto MAIN_LOOP_RESTART;
-        }
-
-        if (debug_on) {
-            caches();
-        }
-
-        checksync();
-
-        if (VOLUMEONE)
-            if (ud.show_help == 0 && show_shareware > 0 && (ps[myconnectindex].gm&MODE_MENU) == 0 ) {
-                rotatesprite((320-50)<<16,9<<16,65536L,0,BETAVERSION,0,0,2+8+16+128,0,0,xdim-1,ydim-1);
-            }*/
-
-        nextpage();
-    }
-
-    gameexit(" ");
-    return(0);
-}
 
 uint8_t  opendemoread(uint8_t  which_demo) // 0 = mine
 {
