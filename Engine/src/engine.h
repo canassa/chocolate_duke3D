@@ -163,7 +163,6 @@ extern "C" {
 #include "display.h"
 #include "fixedPoint_math.h"
 #include "tiles.h"
-#include "network.h"
 
 
 //Exported for tile module

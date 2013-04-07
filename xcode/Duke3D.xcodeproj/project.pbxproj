@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2D058BD01686520B00E283DC /* tiles.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D058BCF1686520B00E283DC /* tiles.c */; };
-		2D058BE4168689B200E283DC /* network.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D058BE3168689B200E283DC /* network.c */; };
 		2D2A07CA168286D500064107 /* filesystem.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A07C9168286D400064107 /* filesystem.c */; };
 		2D47FAFF16C6BA0D00DB3597 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623416788AB200E35E54 /* Cocoa.framework */; };
 		2D47FB0616C6BA0D00DB3597 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D47FB0416C6BA0D00DB3597 /* InfoPlist.strings */; };
@@ -17,33 +16,16 @@
 		2D47FB3316C6BA8200DB3597 /* cache.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61F41678885A00E35E54 /* cache.c */; };
 		2D47FB3416C6BA8200DB3597 /* display.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B621C1678885A00E35E54 /* display.c */; };
 		2D47FB3516C6BA8200DB3597 /* draw.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61F11678885A00E35E54 /* draw.c */; };
-		2D47FB3616C6BA8200DB3597 /* dummy_multi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B630016791C0200E35E54 /* dummy_multi.c */; };
-		2D47FB3716C6BA8200DB3597 /* host.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61FA1678885A00E35E54 /* host.c */; };
-		2D47FB3816C6BA8200DB3597 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62061678885A00E35E54 /* list.c */; };
-		2D47FB3916C6BA8200DB3597 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62071678885A00E35E54 /* memory.c */; };
-		2D47FB3A16C6BA8200DB3597 /* packet.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62081678885A00E35E54 /* packet.c */; };
-		2D47FB3B16C6BA8200DB3597 /* peer.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62091678885A00E35E54 /* peer.c */; };
-		2D47FB3C16C6BA8200DB3597 /* protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B620A1678885A00E35E54 /* protocol.c */; };
-		2D47FB3D16C6BA8200DB3597 /* unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B620D1678885A00E35E54 /* unix.c */; };
 		2D47FB3E16C6BA8200DB3597 /* engine.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62101678885A00E35E54 /* engine.c */; };
 		2D47FB3F16C6BA8200DB3597 /* filesystem.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A07C9168286D400064107 /* filesystem.c */; };
 		2D47FB4016C6BA8200DB3597 /* fixedPoint_math.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B621A1678885A00E35E54 /* fixedPoint_math.c */; };
 		2D47FB4116C6BA8200DB3597 /* tiles.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D058BCF1686520B00E283DC /* tiles.c */; };
-		2D47FB4216C6BA8200DB3597 /* network.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D058BE3168689B200E283DC /* network.c */; };
 		2D47FB4316C6BA8200DB3597 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B7AED16792D6700DB503A /* SDLMain.m */; };
 		2D47FB4916C6BC2200DB3597 /* SDL_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D7B623216788AAB00E35E54 /* SDL_mixer.framework */; };
 		2D47FB4A16C6BC2200DB3597 /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D7B623016788A9B00E35E54 /* SDL.framework */; };
 		2D47FB4E16C6BF1C00DB3597 /* duke_3d_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2D47FB4D16C6BF1C00DB3597 /* duke_3d_icon.icns */; };
 		2D7B621D1678885A00E35E54 /* draw.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61F11678885A00E35E54 /* draw.c */; };
 		2D7B621E1678885A00E35E54 /* cache.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61F41678885A00E35E54 /* cache.c */; };
-		2D7B621F1678885A00E35E54 /* host.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B61FA1678885A00E35E54 /* host.c */; };
-		2D7B62201678885A00E35E54 /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62061678885A00E35E54 /* list.c */; };
-		2D7B62211678885A00E35E54 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62071678885A00E35E54 /* memory.c */; };
-		2D7B62221678885A00E35E54 /* packet.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62081678885A00E35E54 /* packet.c */; };
-		2D7B62231678885A00E35E54 /* peer.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62091678885A00E35E54 /* peer.c */; };
-		2D7B62241678885A00E35E54 /* protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B620A1678885A00E35E54 /* protocol.c */; };
-		2D7B62251678885A00E35E54 /* unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B620D1678885A00E35E54 /* unix.c */; };
-		2D7B62261678885A00E35E54 /* win32.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B620E1678885A00E35E54 /* win32.c */; };
 		2D7B62271678885A00E35E54 /* engine.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B62101678885A00E35E54 /* engine.c */; };
 		2D7B622C1678885A00E35E54 /* fixedPoint_math.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B621A1678885A00E35E54 /* fixedPoint_math.c */; };
 		2D7B622D1678885A00E35E54 /* display.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B621C1678885A00E35E54 /* display.c */; };
@@ -51,7 +33,6 @@
 		2D7B623716788AE200E35E54 /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623216788AAB00E35E54 /* SDL_mixer.framework */; };
 		2D7B623816788AF800E35E54 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623016788A9B00E35E54 /* SDL.framework */; };
 		2D7B627516788F9B00E35E54 /* game.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B625016788F9B00E35E54 /* game.c */; };
-		2D7B630116791C0300E35E54 /* dummy_multi.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B630016791C0200E35E54 /* dummy_multi.c */; };
 		2D7B7AEE16792D6700DB503A /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B7AED16792D6700DB503A /* SDLMain.m */; };
 		2D7B7B121679325D00DB503A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B7B111679325D00DB503A /* CoreFoundation.framework */; };
 		51516E1816E3BBED00A480FC /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7B623216788AAB00E35E54 /* SDL_mixer.framework */; };
@@ -84,8 +65,6 @@
 /* Begin PBXFileReference section */
 		2D058BCD168651F700E283DC /* tiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tiles.h; path = ../../Engine/src/tiles.h; sourceTree = "<group>"; };
 		2D058BCF1686520B00E283DC /* tiles.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tiles.c; path = ../../Engine/src/tiles.c; sourceTree = "<group>"; };
-		2D058BE2168689A500E283DC /* network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = network.h; path = ../../Engine/src/network.h; sourceTree = "<group>"; };
-		2D058BE3168689B200E283DC /* network.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = network.c; path = ../../Engine/src/network.c; sourceTree = "<group>"; };
 		2D2A07C9168286D400064107 /* filesystem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = filesystem.c; path = ../../Engine/src/filesystem.c; sourceTree = "<group>"; };
 		2D2A07CB168286F200064107 /* filesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = filesystem.h; path = ../../Engine/src/filesystem.h; sourceTree = "<group>"; };
 		2D47FADE16C6B94600DB3597 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -105,23 +84,6 @@
 		2D7B61F41678885A00E35E54 /* cache.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cache.c; path = ../../Engine/src/cache.c; sourceTree = "<group>"; };
 		2D7B61F51678885A00E35E54 /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cache.h; path = ../../Engine/src/cache.h; sourceTree = "<group>"; };
 		2D7B61F61678885A00E35E54 /* display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = display.h; path = ../../Engine/src/display.h; sourceTree = "<group>"; };
-		2D7B61FA1678885A00E35E54 /* host.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = host.c; sourceTree = "<group>"; };
-		2D7B61FC1678885A00E35E54 /* enet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enet.h; sourceTree = "<group>"; };
-		2D7B61FD1678885A00E35E54 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
-		2D7B61FE1678885A00E35E54 /* memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory.h; sourceTree = "<group>"; };
-		2D7B61FF1678885A00E35E54 /* protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = protocol.h; sourceTree = "<group>"; };
-		2D7B62001678885A00E35E54 /* time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time.h; sourceTree = "<group>"; };
-		2D7B62011678885A00E35E54 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
-		2D7B62021678885A00E35E54 /* unix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unix.h; sourceTree = "<group>"; };
-		2D7B62031678885A00E35E54 /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
-		2D7B62041678885A00E35E54 /* win32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = win32.h; sourceTree = "<group>"; };
-		2D7B62061678885A00E35E54 /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
-		2D7B62071678885A00E35E54 /* memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memory.c; sourceTree = "<group>"; };
-		2D7B62081678885A00E35E54 /* packet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = packet.c; sourceTree = "<group>"; };
-		2D7B62091678885A00E35E54 /* peer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = peer.c; sourceTree = "<group>"; };
-		2D7B620A1678885A00E35E54 /* protocol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = protocol.c; sourceTree = "<group>"; };
-		2D7B620D1678885A00E35E54 /* unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unix.c; sourceTree = "<group>"; };
-		2D7B620E1678885A00E35E54 /* win32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = win32.c; sourceTree = "<group>"; };
 		2D7B62101678885A00E35E54 /* engine.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = engine.c; path = ../../Engine/src/engine.c; sourceTree = "<group>"; };
 		2D7B62111678885A00E35E54 /* engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = engine.h; path = ../../Engine/src/engine.h; sourceTree = "<group>"; };
 		2D7B62121678885A00E35E54 /* icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = icon.h; path = ../../Engine/src/icon.h; sourceTree = "<group>"; };
@@ -134,7 +96,6 @@
 		2D7B623216788AAB00E35E54 /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = /Library/Frameworks/SDL_mixer.framework; sourceTree = "<absolute>"; };
 		2D7B623416788AB200E35E54 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2D7B625016788F9B00E35E54 /* game.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = game.c; path = ../../Game/src/game.c; sourceTree = "<group>"; };
-		2D7B630016791C0200E35E54 /* dummy_multi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dummy_multi.c; path = ../../Engine/src/dummy_multi.c; sourceTree = "<group>"; };
 		2D7B7AED16792D6700DB503A /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
 		2D7B7AEF16792D8900DB503A /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
 		2D7B7B111679325D00DB503A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -172,7 +133,6 @@
 				2D7B61F51678885A00E35E54 /* cache.h */,
 				2D7B61F61678885A00E35E54 /* display.h */,
 				2D7B61F21678885A00E35E54 /* draw.h */,
-				2D2A07CE1682875B00064107 /* enet */,
 				2D7B62111678885A00E35E54 /* engine.h */,
 				2D2A07CB168286F200064107 /* filesystem.h */,
 				2D7B62121678885A00E35E54 /* icon.h */,
@@ -180,7 +140,6 @@
 				2D7B62191678885A00E35E54 /* platform.h */,
 				2D7B621B1678885A00E35E54 /* fixedPoint_math.h */,
 				2D058BCD168651F700E283DC /* tiles.h */,
-				2D058BE2168689A500E283DC /* network.h */,
 			);
 			name = headers;
 			sourceTree = "<group>";
@@ -191,23 +150,12 @@
 				2D7B61F41678885A00E35E54 /* cache.c */,
 				2D7B621C1678885A00E35E54 /* display.c */,
 				2D7B61F11678885A00E35E54 /* draw.c */,
-				2D7B630016791C0200E35E54 /* dummy_multi.c */,
-				2D7B61F71678885A00E35E54 /* enet */,
 				2D7B62101678885A00E35E54 /* engine.c */,
 				2D2A07C9168286D400064107 /* filesystem.c */,
 				2D7B621A1678885A00E35E54 /* fixedPoint_math.c */,
 				2D058BCF1686520B00E283DC /* tiles.c */,
-				2D058BE3168689B200E283DC /* network.c */,
 			);
 			name = implementations;
-			sourceTree = "<group>";
-		};
-		2D2A07CE1682875B00064107 /* enet */ = {
-			isa = PBXGroup;
-			children = (
-				2D7B61FB1678885A00E35E54 /* include */,
-			);
-			name = enet;
 			sourceTree = "<group>";
 		};
 		2D2A07CF16828B7600064107 /* headers */ = {
@@ -307,39 +255,6 @@
 			name = Engine;
 			sourceTree = "<group>";
 		};
-		2D7B61F71678885A00E35E54 /* enet */ = {
-			isa = PBXGroup;
-			children = (
-				2D7B61FA1678885A00E35E54 /* host.c */,
-				2D7B62061678885A00E35E54 /* list.c */,
-				2D7B62071678885A00E35E54 /* memory.c */,
-				2D7B62081678885A00E35E54 /* packet.c */,
-				2D7B62091678885A00E35E54 /* peer.c */,
-				2D7B620A1678885A00E35E54 /* protocol.c */,
-				2D7B620D1678885A00E35E54 /* unix.c */,
-				2D7B620E1678885A00E35E54 /* win32.c */,
-			);
-			name = enet;
-			path = ../../Engine/src/enet;
-			sourceTree = "<group>";
-		};
-		2D7B61FB1678885A00E35E54 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				2D7B61FC1678885A00E35E54 /* enet.h */,
-				2D7B61FD1678885A00E35E54 /* list.h */,
-				2D7B61FE1678885A00E35E54 /* memory.h */,
-				2D7B61FF1678885A00E35E54 /* protocol.h */,
-				2D7B62001678885A00E35E54 /* time.h */,
-				2D7B62011678885A00E35E54 /* types.h */,
-				2D7B62021678885A00E35E54 /* unix.h */,
-				2D7B62031678885A00E35E54 /* utility.h */,
-				2D7B62041678885A00E35E54 /* win32.h */,
-			);
-			name = include;
-			path = ../../Engine/src/enet/include;
-			sourceTree = "<group>";
-		};
 		2D7B623916788F7900E35E54 /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,19 +350,10 @@
 				2D47FB3316C6BA8200DB3597 /* cache.c in Sources */,
 				2D47FB3416C6BA8200DB3597 /* display.c in Sources */,
 				2D47FB3516C6BA8200DB3597 /* draw.c in Sources */,
-				2D47FB3616C6BA8200DB3597 /* dummy_multi.c in Sources */,
-				2D47FB3716C6BA8200DB3597 /* host.c in Sources */,
-				2D47FB3816C6BA8200DB3597 /* list.c in Sources */,
-				2D47FB3916C6BA8200DB3597 /* memory.c in Sources */,
-				2D47FB3A16C6BA8200DB3597 /* packet.c in Sources */,
-				2D47FB3B16C6BA8200DB3597 /* peer.c in Sources */,
-				2D47FB3C16C6BA8200DB3597 /* protocol.c in Sources */,
-				2D47FB3D16C6BA8200DB3597 /* unix.c in Sources */,
 				2D47FB3E16C6BA8200DB3597 /* engine.c in Sources */,
 				2D47FB3F16C6BA8200DB3597 /* filesystem.c in Sources */,
 				2D47FB4016C6BA8200DB3597 /* fixedPoint_math.c in Sources */,
 				2D47FB4116C6BA8200DB3597 /* tiles.c in Sources */,
-				2D47FB4216C6BA8200DB3597 /* network.c in Sources */,
 				2D47FB4316C6BA8200DB3597 /* SDLMain.m in Sources */,
 				2D47FB1D16C6BA2E00DB3597 /* game.c in Sources */,
 			);
@@ -459,23 +365,13 @@
 			files = (
 				2D7B621D1678885A00E35E54 /* draw.c in Sources */,
 				2D7B621E1678885A00E35E54 /* cache.c in Sources */,
-				2D7B621F1678885A00E35E54 /* host.c in Sources */,
-				2D7B62201678885A00E35E54 /* list.c in Sources */,
-				2D7B62211678885A00E35E54 /* memory.c in Sources */,
-				2D7B62221678885A00E35E54 /* packet.c in Sources */,
-				2D7B62231678885A00E35E54 /* peer.c in Sources */,
-				2D7B62241678885A00E35E54 /* protocol.c in Sources */,
-				2D7B62251678885A00E35E54 /* unix.c in Sources */,
-				2D7B62261678885A00E35E54 /* win32.c in Sources */,
 				2D7B62271678885A00E35E54 /* engine.c in Sources */,
 				2D7B622C1678885A00E35E54 /* fixedPoint_math.c in Sources */,
 				2D7B622D1678885A00E35E54 /* display.c in Sources */,
 				2D7B627516788F9B00E35E54 /* game.c in Sources */,
-				2D7B630116791C0300E35E54 /* dummy_multi.c in Sources */,
 				2D7B7AEE16792D6700DB503A /* SDLMain.m in Sources */,
 				2D2A07CA168286D500064107 /* filesystem.c in Sources */,
 				2D058BD01686520B00E283DC /* tiles.c in Sources */,
-				2D058BE4168689B200E283DC /* network.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

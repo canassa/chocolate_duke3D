@@ -20,10 +20,6 @@
 #include "cache.h"
 #include "build.h"
 
-//#include "../../Game/src/cvar_defs.h"
-
-#include "types.h"
-
 /*
  *   This module keeps track of a standard linear cacheing system.
  *   To use this module, here's all you need to do:

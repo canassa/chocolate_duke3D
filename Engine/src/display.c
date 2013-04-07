@@ -41,11 +41,7 @@
 #include "display.h"
 #include "fixedPoint_math.h"
 #include "engine.h"
-#include "network.h"
 
-#include "mmulti_unstable.h"
-#include "mmulti_stable.h"
-#include "network.h"
 #include "icon.h"
 
 // NATIVE TIMER FUNCTION DECLARATION
@@ -724,23 +720,6 @@ void _platform_init(int argc, char  **argv, const char  *title, const char  *ico
     // FIX_00061: "ERROR: Two players have the same random ID" too frequent cuz of internet windows times
     TIMER_GetPlatformTicks(&timeElapsed);
     srand(timeElapsed&0xFFFFFFFF);
-
-    Setup_UnstableNetworking();
-
-    // Look through the command line args
-    for (i = 0; i < argc; i++) {
-        if (argv[i][0] == '-' ) {
-            if (strcmpi(argv[i], "-netmode_stable") == 0) {
-                //fullscreen = 1;
-                //TODO:
-//TODO ( "[Todo: handle -netmode <int>]" )
-                Setup_StableNetworking();
-
-            }
-        }
-    }
-
-
 
 #ifdef __APPLE__
     SDL_putenv("SDL_VIDEODRIVER=Quartz");
