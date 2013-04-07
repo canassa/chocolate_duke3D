@@ -4,7 +4,7 @@
 #include "engine.h"
 
 
-int32_t BFullScreen = 1;  // defined in Game\src\config.c
+int32_t BFullScreen = 0;  // defined in Game\src\config.c
 int32_t ScreenMode = 1;
 
 // Game play speed
