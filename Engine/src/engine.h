@@ -25,6 +25,15 @@ extern "C" {
 
 //#define SUPERBUILD  /* don't touch this. */
 
+
+extern int32_t *horizlookup, *horizlookup2, horizycent;
+extern int32_t oxdimen, oviewingrange, oxyaspect;
+extern int32_t searchx, searchy;
+extern int32_t wx1, wy1, wx2, wy2, ydimen;
+extern int32_t xdimen, xdimenrecip, halfxdimen, xdimenscale, xdimscale;
+extern int32_t curbrightness;
+
+
 #define MAXWALLSB 2048
 #define MAXYSAVES ((MAXXDIM*MAXSPRITES)>>7)
 

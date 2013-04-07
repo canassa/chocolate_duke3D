@@ -17,17 +17,11 @@ char  **_argv;
 /* !!! gads, look at all the namespace polution... */
 extern uint8_t  *screen;
 extern uint8_t  moustat;
-extern int32_t *horizlookup, *horizlookup2, horizycent;
-extern int32_t oxdimen, oviewingrange, oxyaspect;
-extern int32_t curbrightness;
 extern int32_t  pageoffset, ydim16;
 extern uint8_t *frameplace;
 extern uint8_t *frameoffset;
 extern uint8_t  textfont[1024], smalltextfont[1024];
 extern uint8_t  pow2char[8];
-extern int32_t searchx, searchy;
-extern int32_t wx1, wy1, wx2, wy2, ydimen;
-extern int32_t xdimen, xdimenrecip, halfxdimen, xdimenscale, xdimscale;
 
 /*
  * !!! used to be static. If we ever put the original setgamemode() back, this
